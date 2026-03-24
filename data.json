@@ -1,0 +1,137 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Harsh Gupta",
+      "email": "student@demo.com",
+      "password": "password123",
+      "college": "Priyadarshini College of Engineering",
+      "year": "4th Year",
+      "branch": "Information Technology",
+      "bio": "A passionate programmer skilled in full-stack development.",
+      "skills": [
+        "React",
+        "Node.js",
+        "Python"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Priya S.",
+      "email": "priya@demo.com",
+      "college": "MIT World Peace University",
+      "year": "Final Year",
+      "branch": "Design",
+      "bio": "Creative designer.",
+      "skills": [
+        "Figma",
+        "UI/UX Design"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Amit G.",
+      "email": "amit@demo.com",
+      "college": "COEP Technological University",
+      "year": "Second Year",
+      "branch": "Information Technology",
+      "bio": "Competitive programmer.",
+      "skills": [
+        "C++",
+        "DSA"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Admin",
+      "email": "admin@camp-link.com",
+      "password": "adminpass",
+      "isAdmin": true
+    }
+  ],
+  "projects": [
+    {
+      "id": 1770043034229,
+      "title": "Script Writer Needed For Youtube",
+      "description": "I need a Script Writer for my Youtube Channel Name Spyrec ",
+      "category": "Script Writer",
+      "budget": 500,
+      "postedBy": 1,
+      "skills": [
+        "scripting",
+        "youtube"
+      ],
+      "status": "Open"
+    },
+    {
+      "id": 2,
+      "title": "Proofread Final Year Thesis",
+      "postedBy": 3,
+      "category": "Writing",
+      "description": "50-page thesis needs proofreading.",
+      "budget": 300,
+      "status": "Open",
+      "skills": [
+        "Proofreading"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Build a Portfolio Website",
+      "postedBy": 2,
+      "category": "Web Development",
+      "description": "Simple responsive portfolio.",
+      "budget": 600,
+      "status": "Hired",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": "I will be your virtual C++ tutor",
+      "category": "Tutoring",
+      "description": "DSA tutoring 1-on-1.",
+      "budget": 800,
+      "postedBy": 3,
+      "skills": [
+        "C++",
+        "DSA"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "I will create custom social media graphics",
+      "category": "Graphic Design",
+      "description": "Canva and Figma designs.",
+      "budget": 500,
+      "postedBy": 2,
+      "skills": [
+        "Canva",
+        "Figma"
+      ]
+    }
+  ],
+  "proposals": [
+    {
+      "id": 1,
+      "projectId": 3,
+      "proposerId": 1,
+      "bid": 5500,
+      "coverLetter": "I can build this quickly.",
+      "status": "Hired"
+    },
+    {
+      "id": 1770043048612,
+      "proposerId": 1,
+      "bid": 55,
+      "coverLetter": "fv",
+      "projectId": 2,
+      "status": "Submitted"
+    }
+  ]
+}

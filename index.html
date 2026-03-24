@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Camp-Link | Freelance Platform</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="app" class="app-container">
+
+            <header class="navbar">
+                <nav class="container nav-content">
+                    <a href="#" data-view-target="landing" class="logo">
+                        <div class="logo-icon"></div>
+                        <span id="name">Camp-Link</span>
+                    </a>
+                    <div class="nav-buttons">
+                        <button id="theme-toggle-btn" class="btn btn-outline" style="padding: 0.5rem;">
+                            <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="4" />
+                                <path d="M12 2v2" />
+                                <path d="M12 20v2" />
+                                <path d="m4.93 4.93 1.41 1.41" />
+                                <path d="m17.66 17.66 1.41 1.41" />
+                                <path d="M2 12h2" />
+                                <path d="M20 12h2" />
+                                <path d="m4.93 19.07 1.41-1.41" />
+                                <path d="m17.66 6.34 1.41-1.41" />
+                            </svg>
+                            <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                            </svg>
+                        </button>
+                        <div id="auth-nav-buttons" class="nav-buttons">
+                            <button class="btn btn-ghost" data-view-target="admin-login">Admin Login</button>
+                            <button class="btn btn-outline" data-view-target="login">Login</button>
+                            <button class="btn btn-solid" data-view-target="signup">Get Started</button>
+                        </div>
+                        <div id="app-nav-buttons" class="nav-buttons" style="display: none;">
+                            <!-- App buttons are dynamically generated -->
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+                <div id="landing-view" class="view">
+                    <section class="page-section text-center" style="padding: 6rem 0;">
+                        <div class="container">
+                            <h1 class="section-title tagline" style="font-size: 3rem; font-weight: 800;">Connect.
+                                Collaborate.
+                                <span
+                                    style="background-image: linear-gradient(to right, var(--indigo-400), var(--fuchsia-400)); background-clip: text; -webkit-background-clip: text; color: transparent;">Build
+                                    together.</span>
+                            </h1>
+                            <p class="text-lg"
+                                style="max-width: 42rem; margin: 1.5rem auto 0; color: var(--slate-300);">The exclusive
+                                freelance marketplace for verified students. Find projects, offer your skills, and build
+                                your portfolio within a trusted network.</p>
+                            <div class="mt-8"><button class="btn btn-solid join_camp" data-view-target="signup"> <span
+                                        id="joining">Join Your Campus Network </span>
+                                </button></div>
+                        </div>
+                    </section>
+                    <section class="page-section" style="padding-top: 0;">
+                        <h2 class="get_now">Claim this now</h2>
+                        <p id="claim_now">Get these features immediately as You join our platform</p>
+                        <div class="container grid md-grid-cols-3 gap-4">
+                            <div class="card card-content text-center">
+                                <div class="font-semibold benefits"> 2x</div>
+                                <div class="text-slate-400 text-sm">Faster team-ups vs. generic groups</div>
+                            </div>
+                            <div class="card card-content text-center">
+                                <div class="benefits font-semibold">24/7</div>
+                                <div class="text-slate-400 text-sm">Built-in chat & notifications</div>
+                            </div>
+                            <div class="card card-content text-center">
+                                <div class="benefits font-semibold">City/College</div>
+                                <div class="text-slate-400 text-sm">Filter to find the right people</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="page-section">
+                        <div class="container">
+                            <div class="text-center">
+                                <h2 class="section-title">What you can do</h2>
+                                <p class="section-subtitle">Everything you need to collaborate inside your campus—and
+                                    nearby colleges.</p>
+                            </div>
+                            <div class="mt-8 grid md-grid-cols-3 gap-6">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="font-semibold features">
+                                            College-based login</h3>
+                                        <p class="text-sm text-slate-300 mt-2">Upload ID or verify email to access the
+                                            network.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="font-semibold features">
+                                            Profiles that matter</h3>
+                                        <p class="text-sm text-slate-300 mt-2">Show skills, interests, and availability
+                                            in a clean card.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="font-semibold features">
+                                            Tasks + Chat</h3>
+                                        <p class="text-sm text-slate-300 mt-2">Post tasks; accept & discuss with
+                                            built-in chat.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="font-semibold features">
+                                            City / College filter</h3>
+                                        <p class="text-sm text-slate-300 mt-2">Discover peers around you for quick,
+                                            local turnarounds.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="font-semibold features">
+                                            Moderation & Admin</h3>
+                                        <p class="text-sm text-slate-300 mt-2">Admin console to review users and
+                                            moderate tasks.</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="font-semibold features">
+                                            Privacy-first</h3>
+                                        <p class="text-sm text-slate-300 mt-2">Only verified members can see and
+                                            interact with tasks.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="login-view" class="view page-section">
+                    <div class="container max-w-md">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Student Login</h3>
+                            </div>
+                            <div class="card-content">
+                                <form id="login-form" class="form-stack"><input class="input" type="email"
+                                        placeholder="you@email.com" required value="student@demo.com"><input
+                                        class="input" type="password" placeholder="Password" required
+                                        value="password123">
+                                    <div class="form-actions"><button class="btn btn-solid"
+                                            type="submit">Login</button><button class="btn btn-outline back-btn"
+                                            type="button">Back</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="admin-login-view" class="view page-section">
+                    <div class="container max-w-md">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Admin Login</h3>
+                            </div>
+                            <div class="card-content">
+                                <form id="admin-login-form" class="form-stack"><input class="input" type="email"
+                                        placeholder="admin@camp-link.com" required value="admin@camp-link.com"><input
+                                        class="input" type="password" placeholder="Password" required value="adminpass">
+                                    <div class="form-actions"><button class="btn btn-solid" type="submit">Login as
+                                            Admin</button><button class="btn btn-outline back-btn"
+                                            type="button">Back</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="signup-view" class="view page-section">
+                    <div class="container max-w-md">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Create Account</h3>
+                                <p class="card-subtitle">Join the exclusive network for student freelancers.</p>
+                            </div>
+                            <div class="card-content">
+                                <form id="signup-form" class="form-stack"><input name="name" class="input"
+                                        placeholder="Full Name" required><input name="email" class="input" type="email"
+                                        placeholder="you@email.com" required>
+                                    <div><label class="form-label" for="college-id-upload">Upload College
+                                            ID</label><input id="college-id-upload" name="collegeId" class="input"
+                                            type="file" required>
+                                        <p id="file-name-display" class="text-xs text-slate-400 mt-2"></p>
+                                    </div>
+                                    <div class="form-actions"><button class="btn btn-solid" type="submit">Create
+                                            Account</button><button class="btn btn-outline back-btn"
+                                            type="button">Back</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="review-view" class="view page-section">
+                    <div class="container max-w-md text-center">
+                        <h2 class="section-title">ID Submitted for Review</h2>
+                        <p class="text-slate-400 mt-4">Your College ID is being verified. You can proceed with a demo
+                            account in the meantime to explore the platform.</p>
+                        <div class="mt-8"><button id="demo-login-btn" class="btn btn-solid">Proceed with Demo
+                                Login</button></div>
+                    </div>
+                </div>
+
+                <!-- Main App Views -->
+                <div id="marketplace-view" class="view page-section">
+                    <div class="container max-w-5xl">
+                        <header class="marketplace-header">
+                            <div class="tabs">
+                                <button class="tab active" data-tab="projects">Browse Projects</button>
+                                <button class="tab" data-tab="services">Browse Services</button>
+                            </div>
+                            <div class="marketplace-actions">
+                                <input id="search-input" class="input search-bar"
+                                    placeholder="Search for 'Python', 'logo design'...">
+                                <button id="post-new-btn" class="btn btn-solid">Post New...</button>
+                            </div>
+                        </header>
+                        <div id="listings-container" class="grid md-grid-cols-2 lg-grid-cols-3 gap-6"></div>
+                    </div>
+                </div>
+                <div id="project-detail-view" class="view page-section">
+                    <div class="container max-w-3xl" id="project-detail-content"></div>
+                </div>
+                <div id="activity-view" class="view page-section">
+                    <div class="container max-w-5xl">
+                        <div class="page-header"><button class="btn btn-outline back-btn">← Back</button>
+                            <h2 class="section-title">My Activity</h2>
+                        </div>
+                        <div class="tabs mb-4">
+                            <button class="tab active" data-activity-tab="projects">My Projects</button>
+                            <button class="tab" data-activity-tab="services">My Services</button>
+                            <button class="tab" data-activity-tab="proposals">My Proposals</button>
+                        </div>
+                        <div id="activity-content-container">
+                            <div id="my-projects-section" class="activity-section"></div>
+                            <div id="my-services-section" class="activity-section" style="display: none;"></div>
+                            <div id="my-proposals-section" class="activity-section" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proposals-view" class="view page-section">
+                    <div class="container max-w-3xl">
+                        <div id="proposals-list-content"></div>
+                    </div>
+                </div>
+                <div id="profile-view" class="view page-section">
+                    <div class="container max-w-3xl">
+                        <div class="page-header"><button class="btn btn-outline back-btn">← Back</button>
+                            <div class="flex-between" style="width:100%">
+                                <h2 id="profile-page-title" class="section-title">My Profile</h2><button
+                                    id="edit-profile-btn" class="btn btn-outline">Edit Profile</button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-content form-stack">
+                                <div id="profile-content-area"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="admin-dashboard-view" class="view page-section">
+                    <div class="container max-w-5xl">
+                        <div class="page-header">
+                            <h2 class="section-title">Admin Dashboard</h2>
+                        </div>
+                        <div class="tabs mb-4">
+                            <button class="tab active" data-tab="projects">All Projects</button>
+                            <button class="tab" data-tab="services">All Services</button>
+                        </div>
+                        <div id="admin-listings-container" class="grid md-grid-cols-2 lg-grid-cols-3 gap-6"></div>
+                    </div>
+                </div>
+            </main>
+            <!--                                footer part                        -->
+            <footer class="footer">
+                <div class="container text-sm text-slate-400">© <span id="year"></span> Camp-Link. For demonstration
+                    purposes only.
+                    <h3>Concept By - me </h3>
+                </div>
+
+            </footer>
+        </div>
+
+        <div id="proposal-modal" class="modal-overlay">
+            <div class="modal-content"><button class="modal-close-btn">&times;</button>
+                <h3 class="card-title mb-4">Submit Your Proposal</h3>
+                <form id="proposal-form" class="form-stack"><textarea id="proposal-cover-letter" class="textarea"
+                        placeholder="Write a short message explaining what do you offer or want for this project or service..."
+                        required></textarea><input id="proposal-bid" class="input" type="number"
+                        placeholder="Your bid in ₹ (e.g., 2000)" required><button class="btn btn-solid"
+                        type="submit">Submit Proposal</button></form>
+            </div>
+        </div>
+        <div id="post-modal" class="modal-overlay">
+            <div class="modal-content"><button class="modal-close-btn">&times;</button>
+                <h3 id="modal-title" class="card-title mb-4">Create a New Listing</h3>
+                <form id="post-form" class="form-stack">
+                    <div class="toggle-group"><button type="button" class="toggle-btn active" data-type="project">Post a
+                            Project</button><button type="button" class="toggle-btn" data-type="service">Offer a
+                            Service</button></div><input name="title" class="input"
+                        placeholder="e.g., Build a responsive landing page" required><textarea name="description"
+                        class="textarea" placeholder="Describe your project or service in detail..."
+                        required></textarea><input name="category" class="input" placeholder="e.g., Web Development"
+                        required><input name="budget" class="input" type="number" placeholder="Budget in ₹ (e.g., 5000)"
+                        required><input name="skills" class="input"
+                        placeholder="Skills (comma-separated, e.g., Python, React)" required>
+                    <div class="mt-2"><button class="btn btn-solid" type="submit">Post Listing</button></div>
+                </form>
+            </div>
+        </div>
+        <div id="contact-modal" class="modal-overlay">
+            <div class="modal-content"><button class="modal-close-btn">&times;</button>
+                <h3 class="card-title mb-4">Contact Seller</h3>
+                <p id="contact-modal-service-title" class="text-sm text-slate-400 mb-4"></p>
+                <form id="contact-form" class="form-stack"><input name="email" class="input" type="email"
+                        placeholder="Your Email Address" required><textarea name="message" class="textarea"
+                        placeholder="Your message..." required></textarea><button class="btn btn-solid"
+                        type="submit">Send Message</button></form>
+            </div>
+        </div>
+        <div id="notification"></div>
+
+    </body>
+
+</html>
